@@ -16,10 +16,11 @@
     font-family: 'Kumbh Sans', sans-serif;
 }
 body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
     font-size: 12px;
     background: linear-gradient(var(--SoftViolet) , var(--SoftBlue));
-    display: flex;
-    height: 100vh;
 }
 main{
     position: relative;
@@ -97,7 +98,7 @@ ul > li > h2.active + p {
     text-align: center;
 }
 .attribution a {
-    color: hsl(228, 45%, 44%);
+    color: white;
 }
 @media (min-width:800px) {
     main {
