@@ -24,21 +24,25 @@ body{
 main{
     position: relative;
     width: 90%;
+    min-width: 337px;
     margin: auto;
-    background-color: var(--LightGrayishBlue);
+    background-color: white;
     box-shadow: 0px 10px 50px var(--VeryDarkGrayishBlue);
     border-radius: 1.5rem;
 }
-main > img:first-child{
+main > picture:first-child > img {
     position: absolute;
     width: 15rem;
     left: 50%;
     top: -6.7rem;
     transform: translateX(-50%);
 }
-main > img:nth-child(2){
+main > picture:nth-child(2) img {
     display: block;
     margin: auto;
+}
+body > picture > img {
+    display: none;
 }
 header {
     margin-top: 2rem;
@@ -83,7 +87,7 @@ ul > li > h2.active {
     color: var(--VeryDarkSesaturatedBlue);
 }
 ul > li >h2.active > img {
-    transform: rotateZ(-179deg);
+    transform: rotateZ(-179deg) translateY(50%);
 }
 ul > li > h2.active + p {
     height: 45px;
@@ -94,4 +98,44 @@ ul > li > h2.active + p {
 }
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+@media (min-width:800px) {
+    main {
+        width: 800px;
+        min-height: 450px;
+        overflow: hidden;
+    }
+    header {
+        margin-top: 4rem;
+    }
+    ul {
+        float: right;
+        width: 45%;
+        margin-right: 8%;
+    }
+    body > picture > img {
+        display: initial;
+        position: absolute;
+        width: 10rem;
+        top: 50%;
+        left: 50%;
+        transform: translateY(-25%) translateX(-300%);
+        z-index: 1;
+    }
+    main > picture:first-child > img {
+        width: 25rem;
+        left: -8%;
+        top: 50%;
+        transform: translateX(0) translateY(-50%);
+    }
+    main > picture:nth-child(2) img {
+        position: absolute;
+        width: 100%;
+        left: -58%;
+        top: -50%;
+    }
+    main > header h1 {
+        margin-left: 1rem;
+    }
+    
 }
